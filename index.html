@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 1180px)" href="mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Swiggy clone</title>
+</head>
+<body>
+     <div class="main-container">
+        <!-- navbar section -->
+        <header class="navbar">
+            <div class="global-nav">
+                <div class="nav">
+                    <div class="left">
+                        <a href="#home" class="logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="49" viewBox="-7.3 3.6 2520.1 3702.8" width="34"><path d="m1255.2 3706.3c-2.4-1.7-5-4-7.8-6.3-44.6-55.3-320.5-400.9-601.6-844.2-84.4-141.2-139.1-251.4-128.5-279.9 27.5-74.1 517.6-114.7 668.5-47.5 45.9 20.4 44.7 47.3 44.7 63.1 0 67.8-3.3 249.8-3.3 249.8 0 37.6 30.5 68.1 68.2 68 37.7 0 68.1-30.7 68-68.4l-.7-453.3h-.1c0-39.4-43-49.2-51-50.8-78.8-.5-238.7-.9-410.5-.9-379 0-463.8 15.6-528-26.6-139.5-91.2-367.6-706-372.9-1052-7.5-488 281.5-910.5 688.7-1119.8 170-85.6 362-133.9 565-133.9 644.4 0 1175.2 486.4 1245.8 1112.3 0 .5 0 1.2.1 1.7 13 151.3-820.9 183.4-985.8 139.4-25.3-6.7-31.7-32.7-31.7-43.8-.1-115-.9-438.8-.9-438.8-.1-37.7-30.7-68.1-68.4-68.1-37.6 0-68.1 30.7-68.1 68.4l1.5 596.4c1.2 37.6 32.7 47.7 41.4 49.5 93.8 0 313.1-.1 517.4-.1 276.1 0 392.1 32 469.3 90.7 51.3 39.1 71.1 114 53.8 211.4-154.9 866-1135.9 1939.1-1172.8 1983.8z" fill="#fc8019"/>
+                            </svg>
+                        </a>
+                        <div class="location-div">
+                            <span class="other"> other </span>
+                            <span class="location">Bengaluru, Karnataka, India</span>
+                            <span class="arrow-down"><i class="fa-sharp fa-solid fa-angle-down"></i></span>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <ul class="items">
+                            <li>
+                                <div class="nav-items">
+                                    <a href="">
+                                        <span>
+                                            <svg class="_1GTCc" viewBox="5 -1 12 25" height="17" width="17" fill="#686b78"><path d="M17.6671481,17.1391632 L22.7253317,22.1973467 L20.9226784,24 L15.7041226,18.7814442 C14.1158488,19.8024478 12.225761,20.3946935 10.1973467,20.3946935 C4.56550765,20.3946935 0,15.8291858 0,10.1973467 C0,4.56550765 4.56550765,0 10.1973467,0 C15.8291858,0 20.3946935,4.56550765 20.3946935,10.1973467 C20.3946935,12.8789625 19.3595949,15.3188181 17.6671481,17.1391632 Z M10.1973467,17.8453568 C14.4212261,17.8453568 17.8453568,14.4212261 17.8453568,10.1973467 C17.8453568,5.97346742 14.4212261,2.54933669 10.1973467,2.54933669 C5.97346742,2.54933669 2.54933669,5.97346742 2.54933669,10.1973467 C2.54933669,14.4212261 5.97346742,17.8453568 10.1973467,17.8453568 Z"></path>
+                                            </svg>
+                                        </span>
+                                        <span>Search</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="nav-items">
+                                    <a href="">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" height="17px" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                                <g>
+                                                    <g>
+                                                        <path d="M503.716,121.636H403.385c1.198-1.043,2.377-2.115,3.511-3.249c12.78-12.779,19.818-29.77,19.818-47.842    c0-18.073-7.038-35.064-19.818-47.844c-12.78-12.78-29.772-19.818-47.844-19.818c-18.019,0-34.964,6.998-47.73,19.707    c-14.89,13.888-41.203,58.771-55.323,87.304c-14.121-28.533-40.433-73.415-55.323-87.304    C187.909,9.88,170.965,2.883,152.944,2.883c-18.073,0-35.064,7.038-47.844,19.818c-12.78,12.78-19.818,29.771-19.818,47.844    c0,18.072,7.039,35.064,19.819,47.842c1.134,1.134,2.313,2.207,3.511,3.249H8.284c-4.575,0-8.284,3.709-8.284,8.284v93.405    c0,4.575,3.709,8.284,8.284,8.284h25.717v269.225c0,4.575,3.709,8.284,8.284,8.284h427.428c4.575,0,8.284-3.709,8.284-8.284    V231.609h25.72c4.575,0,8.284-3.709,8.284-8.284V129.92C512,125.345,508.291,121.636,503.716,121.636z M405.846,91.091    c-2.52,5.736-6.101,11.016-10.665,15.579c-9.64,9.64-22.456,14.954-36.084,14.963c-0.014,0-0.028,0.002-0.042,0.002h-49.317    c9.853-19.876,28.368-51.001,36.962-58.953c0.078-0.073,0.156-0.147,0.231-0.223c13.516-13.515,35.507-13.515,49.021,0    C403.554,70.061,407.12,80.45,405.846,91.091z M106.151,91.093c-1.275-10.642,2.293-21.032,9.893-28.633    c13.515-13.515,35.507-13.514,49.021,0c0.075,0.076,0.152,0.15,0.232,0.223c8.594,7.952,27.109,39.076,36.962,58.953h-49.317    c-0.014,0-0.028-0.002-0.042-0.002c-13.629-0.01-26.444-5.324-36.084-14.963C112.252,102.107,108.672,96.828,106.151,91.093z     M50.569,492.55V231.609H206.81V492.55H50.569z M206.811,215.041H16.568v-76.837h190.244V215.041z M176.67,50.635    c-19.15-19.037-49.715-19.784-69.777-2.268c2.465-5.108,5.793-9.823,9.922-13.952c9.651-9.65,22.481-14.965,36.128-14.965    c13.646,0,26.477,5.315,36.127,14.965c0.075,0.076,0.154,0.15,0.232,0.223c13.715,12.689,41.33,60.489,53.994,86.998h-22.721    C211.766,102.154,188.97,62.141,176.67,50.635z M288.619,492.55h-65.241V231.609h65.241V492.55z M288.619,215.041h-65.241v-76.837    h65.241V215.041z M268.699,121.636c12.664-26.508,40.279-74.309,53.994-86.998c0.078-0.073,0.157-0.147,0.232-0.223    c9.65-9.65,22.48-14.965,36.127-14.965s26.478,5.315,36.128,14.965c4.129,4.129,7.457,8.844,9.922,13.952    c-20.062-17.516-50.625-16.769-69.777,2.269c-12.301,11.507-35.096,51.519-43.905,71H268.699z M305.186,492.55V231.609h156.241    V492.55H305.186z M305.186,215.041v-76.837h190.245v76.837H305.186z"/>
+                                                    </g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                </svg>
+                                        </span>
+                                        <span>Offers</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="nav-items">
+                                    <a href="">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" role="img" aria-labelledby="helpIconTitle" stroke="#000000" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="#000000"> <title id="helpIconTitle">Help</title> <path d="M12 14C12 12 13.576002 11.6652983 14.1186858 11.1239516 14.663127 10.5808518 15 9.82976635 15 9 15 7.34314575 13.6568542 6 12 6 11.1040834 6 10.2998929 6.39272604 9.75018919 7.01541737 9.49601109 7.30334431 9.29624369 7.64043912 9.16697781 8.01061095"/> <line x1="12" y1="17" x2="12" y2="17"/> <circle cx="12" cy="12" r="10"/> 
+                                            </svg>
+                                        </span>
+                                        <span>Help</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="nav-items">
+                                    <a href="">
+                                        <span>
+                                            <svg class="_1GTCc" viewBox="6 0 12 24" height="19" width="18" fill="#686b78"><path d="M11.9923172,11.2463768 C8.81761115,11.2463768 6.24400341,8.72878961 6.24400341,5.62318841 C6.24400341,2.5175872 8.81761115,0 11.9923172,0 C15.1670232,0 17.740631,2.5175872 17.740631,5.62318841 C17.740631,8.72878961 15.1670232,11.2463768 11.9923172,11.2463768 Z M11.9923172,9.27536232 C14.0542397,9.27536232 15.7257581,7.64022836 15.7257581,5.62318841 C15.7257581,3.60614845 14.0542397,1.97101449 11.9923172,1.97101449 C9.93039471,1.97101449 8.25887628,3.60614845 8.25887628,5.62318841 C8.25887628,7.64022836 9.93039471,9.27536232 11.9923172,9.27536232 Z M24,24 L0,24 L1.21786143,19.7101449 L2.38352552,15.6939891 C2.85911209,14.0398226 4.59284263,12.7536232 6.3530098,12.7536232 L17.6316246,12.7536232 C19.3874139,12.7536232 21.1256928,14.0404157 21.6011089,15.6939891 L22.9903494,20.5259906 C23.0204168,20.63057 23.0450458,20.7352884 23.0641579,20.8398867 L24,24 Z M21.1127477,21.3339312 L21.0851024,21.2122487 C21.0772161,21.1630075 21.0658093,21.1120821 21.0507301,21.0596341 L19.6614896,16.2276325 C19.4305871,15.4245164 18.4851476,14.7246377 17.6316246,14.7246377 L6.3530098,14.7246377 C5.4959645,14.7246377 4.55444948,15.4231177 4.32314478,16.2276325 L2.75521062,21.6811594 L2.65068631,22.0289855 L21.3185825,22.0289855 L21.1127477,21.3339312 Z"></path>
+                                            </svg>
+                                        </span>
+                                        <span>Sign in</span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="nav-items">
+                                    <a href="">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" height="19" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+                                                <path d="M11.68,13l-0.833-5h-2.99C7.411,6.28,5.859,5,4,5C1.794,5,0,6.794,0,9s1.794,4,4,4c1.859,0,3.411-1.28,3.858-3h1.294l0.5,3  H9.614l5.171,26.016c-2.465,0.188-4.518,2.086-4.76,4.474c-0.142,1.405,0.32,2.812,1.268,3.858C12.242,48.397,13.594,49,15,49h2  c0,3.309,2.691,6,6,6s6-2.691,6-6h11c0,3.309,2.691,6,6,6s6-2.691,6-6h4c0.553,0,1-0.447,1-1s-0.447-1-1-1h-4.35  c-0.826-2.327-3.043-4-5.65-4s-4.824,1.673-5.65,4h-11.7c-0.826-2.327-3.043-4-5.65-4s-4.824,1.673-5.65,4H15  c-0.842,0-1.652-0.362-2.224-0.993c-0.577-0.639-0.848-1.461-0.761-2.316c0.152-1.509,1.546-2.69,3.173-2.69h0.791  c0.014,0,0.025,0,0.039,0h38.994C57.763,41,60,38.763,60,36.013V13H11.68z M4,11c-1.103,0-2-0.897-2-2s0.897-2,2-2s2,0.897,2,2  S5.103,11,4,11z M46,45c2.206,0,4,1.794,4,4s-1.794,4-4,4s-4-1.794-4-4S43.794,45,46,45z M23,45c2.206,0,4,1.794,4,4s-1.794,4-4,4  s-4-1.794-4-4S20.794,45,23,45z M58,36.013C58,37.66,56.66,39,55.013,39H16.821l-4.77-24H58V36.013z"/>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                </svg>
+                                        </span>
+                                        <span>Cart</span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- content section -->
+        <main class="content-section">
+            <section class="restaurant">
+                <div class="container">
+                    <div class="item-bar">
+                        <div class="number">276 restaurants</div>
+                        <div class="filters">
+                            <div class="relevance">Relevance</div>
+                            <div class="delivery">Delivery Time</div>
+                            <div class="ratings">Rating</div>
+                            <div class="cost-lh">Cost: Low to High</div>
+                            <div class="cost-hl">Cost: High to Low</div>
+                        </div>
+                    </div>
+                    
+                    <div class="restaurant-list">
+                        <div class="place">
+                            <a class="place-link" href="https://www.swiggy.com/restaurants/akshaya-deluxe-new-bel-road-mathikere-bangalore-34297">
+                               <div class="list-item">
+                                 <div class="item-content">
+                                        <div class="top-image">
+                                        <img class="_2tuBw _12_oN" alt="Akshaya Deluxe" width="254" height="160" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/gwn9vufnfhk7gyg1ui4n">
+                                        </div>
+                                        
+                                        <div class="place-name-div">
+                                            <div class="name">Akshay Deluxe</div>
+                                            <div class="food-items">
+                                                South Indian, Arabian, Chinese, Kerala, North Indian
+                                            </div>
+                                        </div>
+                                        <div class="info-div">
+                                            <div class="rating1">
+                                                <span class="icon-star"><i class="fa-solid fa-star"></i></span>
+                                                <span>3.8</span>
+                                            </div>
+                                            <div>•</div>
+                                            <div>44 MINS</div>
+                                            <div>•</div>
+                                            <div class="price">Rs.200 FOR TWO</div>
+                                        </div>
+                                        <div class="offer-div">
+                                            <span class="ico-offer-filled"><i class="fa-solid fa-tag"></i></span>
+                                            <span class="offer-text">10% off | Use TRYNEW</span>
+                                        </div>
+                                 </div>
+                                 <div class="quick-view">
+                                    <span class="view-button">
+                                        Quick-view
+                                    </span>
+                                 </div>
+                               </div> 
+                            </a>
+                        </div>
+                        <div class="place">
+                            <a class="place-link" href="https://www.swiggy.com/restaurants/mcdonalds-bel-road-sanjaynagar-bangalore-23699">
+                               <div class="list-item">
+                                 <div class="item-content">
+                                        <div class="top-image">
+                                            <img class="_2tuBw _12_oN" alt="McDonald's" width="254" height="160" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/fe0fxjj0z80doxvg6ved">
+                                        </div>
+                                        <div class="status">Promoted</div>
+                                        <div class="place-name-div">
+                                            <div class="name">McDonald's</div>
+                                            <div class="food-items">
+                                                Burgers, Beverages, Cafe, Desserts
+                                            </div>
+                                        </div>
+                                        <div class="info-div">
+                                            <div class="rating">
+                                                <span class="icon-star"><i class="fa-solid fa-star"></i></span>
+                                                <span>4.3</span>
+                                            </div>
+                                            <div>•</div>
+                                            <div>44 MINS</div>
+                                            <div>•</div>
+                                            <div class="price">Rs.400 FOR TWO</div>
+                                        </div>
+                                        <div class="offer-div">
+                                            <span class="ico-offer-filled"><i class="fa-solid fa-tag"></i></span>
+                                            <span class="offer-text">10% off | Use TRYNEW</span>
+                                        </div>
+                                 </div>
+                                 <div class="quick-view">
+                                    <span class="view-button">
+                                        Quick-view
+                                    </span>
+                                 </div>
+                               </div> 
+                            </a>
+                        </div>
+                        <div class="place">
+                            <a class="place-link" href="https://www.swiggy.com/restaurants/burger-king-rmv-2nd-stage-sanjaynagar-bangalore-8032">
+                               <div class="list-item">
+                                 <div class="item-content">
+                                        <div class="top-image">
+                                            <img class="_2tuBw _12_oN" alt="Burger King" width="254" height="160" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mizjamw8zbupaczztfde">
+                                        </div>
+                                        
+                                        <div class="place-name-div">
+                                            <div class="name">Burger King</div>
+                                            <div class="food-items">
+                                                Burgers, American
+                                            </div>
+                                        </div>
+                                        <div class="info-div">
+                                            <div class="rating">
+                                                <span class="icon-star"><i class="fa-solid fa-star"></i></span>
+                                                <span>4.1</span>
+                                            </div>
+                                            <div>•</div>
+                                            <div>44 MINS</div>
+                                            <div>•</div>
+                                            <div class="price">Rs.350 FOR TWO</div>
+                                        </div>
+                                        <div class="offer-div">
+                                            <span class="ico-offer-filled"><i class="fa-solid fa-tag"></i></span>
+                                            <span class="offer-text">60% off | Use STEALDEAL</span>
+                                        </div>
+                                 </div>
+                                 <div class="quick-view">
+                                    <span class="view-button">
+                                        Quick-view
+                                    </span>
+                                 </div>
+                               </div> 
+                            </a>
+                        </div>
+                        <div class="place">
+                            <a class="place-link" href="https://www.swiggy.com/restaurants/truffles-jeevan-bhima-nagar-sanjaynagar-bangalore-3368">
+                               <div class="list-item">
+                                 <div class="item-content">
+                                        <div class="top-image">
+                                            <img class="_2tuBw _12_oN" alt="Truffles" width="254" height="160" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/ya6ftds9peodeffpn7bt">
+                                        </div>
+                                        <div class="status">Promoted</div>
+                                        <div class="place-name-div">
+                                            <div class="name">Truffles</div>
+                                            <div class="food-items">
+                                                American, Desserts, Italian, Continental
+                                            </div>
+                                        </div>
+                                        <div class="info-div">
+                                            <div class="rating">
+                                                <span class="icon-star"><i class="fa-solid fa-star"></i></span>
+                                                <span>4.4</span>
+                                            </div>
+                                            <div>•</div>
+                                            <div>44 MINS</div>
+                                            <div>•</div>
+                                            <div class="price">Rs.450 FOR TWO</div>
+                                        </div>
+                                        <div class="offer-div">
+                                            <span class="ico-offer-filled"><i class="fa-solid fa-tag"></i></span>
+                                            <span class="offer-text">20% off | Use TRYNEW</span>
+                                        </div>
+                                 </div>
+                                 <div class="quick-view">
+                                    <span class="view-button">
+                                        Quick-view
+                                    </span>
+                                 </div>
+                               </div> 
+                            </a>
+                        </div>
+                        <div class="place">
+                            <a class="place-link" href="https://www.swiggy.com/restaurants/arabian-shawarma-nagavara-and-hennur-bangalore-599592">
+                               <div class="list-item">
+                                 <div class="item-content">
+                                        <div class="top-image">
+                                            <img class="_2tuBw _12_oN" alt="Arabian Shawarma" width="254" height="160" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/qsed4vhpdvitnjpe9hms">
+                                        </div>
+                                        
+                                        <div class="place-name-div">
+                                            <div class="name">Arabian Shawarma</div>
+                                            <div class="food-items">
+                                                Arabian, Snacks, Beverages
+                                            </div>
+                                        </div>
+                                        <div class="info-div">
+                                            <div class="rating1">
+                                                <span class="icon-star"><i class="fa-solid fa-star"></i></span>
+                                                <span>3.9</span>
+                                            </div>
+                                            <div>•</div>
+                                            <div>49 MINS</div>
+                                            <div>•</div>
+                                            <div class="price">Rs.300 FOR TWO</div>
+                                        </div>
+                                        <div class="offer-div">
+                                            <span class="ico-offer-filled"><i class="fa-solid fa-tag"></i></span>
+                                            <span class="offer-text">20% off | Use TRYNEW</span>
+                                        </div>
+                                 </div>
+                                 <div class="quick-view">
+                                    <span class="view-button">
+                                        Quick-view
+                                    </span>
+                                 </div>
+                               </div> 
+                            </a>
+                        </div>
+                        <div class="place">
+                            <a class="place-link" href="https://www.swiggy.com/restaurants/hotel-empire-m-h-chandrappa-r-m-v-2nd-stage-bangalore-265272">
+                               <div class="list-item">
+                                 <div class="item-content">
+                                        <div class="top-image">
+                                            <img class="_2tuBw _12_oN" alt="Hotel Empire" width="254" height="160" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/c2nxvhpqcsxtnlb7wxwq">
+                                        </div>
+                                        <div class="status">Promoted</div>
+                                        <div class="place-name-div">
+                                            <div class="name">Hotel Empire</div>
+                                            <div class="food-items">
+                                                North Indian, Kebabs, Biryani
+                                            </div>
+                                        </div>
+                                        <div class="info-div">
+                                            <div class="rating">
+                                                <span class="icon-star"><i class="fa-solid fa-star"></i></span>
+                                                <span>4.2</span>
+                                            </div>
+                                            <div>•</div>
+                                            <div>37 MINS</div>
+                                            <div>•</div>
+                                            <div class="price">Rs.800 FOR TWO</div>
+                                        </div>
+                                        <div class="offer-div">
+                                            <span class="ico-offer-filled"><i class="fa-solid fa-tag"></i></span>
+                                            <span class="offer-text">10% off | Use TRYNEW</span>
+                                        </div>
+                                 </div>
+                                 <div class="quick-view">
+                                    <span class="view-button">
+                                        Quick-view
+                                    </span>
+                                 </div>
+                               </div> 
+                            </a>
+                        </div>
+                        <div class="place">
+                            <a class="place-link" href="https://www.swiggy.com/restaurants/hotel-kadamba-veg-modi-hospital-road-rajajinagar-bangalore-55176">
+                               <div class="list-item">
+                                 <div class="item-content">
+                                        <div class="top-image">
+                                            <img class="_2tuBw _12_oN" alt="Hotel Kadamba Veg" width="254" height="160" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/ywdpqvhsmaru4uef8szm">
+                                        </div>
+                                        <div class="status">Promoted</div>
+                                        <div class="place-name-div">
+                                            <div class="name">Hotel Kadamba Veg</div>
+                                            <div class="food-items">
+                                                South Indian, North Indian, Chinese, Sweets
+                                            </div>
+                                        </div>
+                                        <div class="info-div">
+                                            <div class="rating">
+                                                <span class="icon-star"><i class="fa-solid fa-star"></i></span>
+                                                <span>4.2</span>
+                                            </div>
+                                            <div>•</div>
+                                            <div>30 MINS</div>
+                                            <div>•</div>
+                                            <div class="price">Rs.400 FOR TWO</div>
+                                        </div>
+                                        <div class="offer-div">
+                                            <span class="ico-offer-filled"><i class="fa-solid fa-tag"></i></span>
+                                            <span class="offer-text">40% off | Use SWIGGYIT</span>
+                                        </div>
+                                 </div>
+                                 <div class="quick-view">
+                                    <span class="view-button">
+                                        Quick-view
+                                    </span>
+                                 </div>
+                               </div> 
+                            </a>
+                        </div>
+                        <div class="place">
+                            <a class="place-link" href="https://www.swiggy.com/restaurants/shanthi-sagar-devasandra-new-bel-road-bangalore-34298">
+                               <div class="list-item">
+                                 <div class="item-content">
+                                        <div class="top-image">
+                                            <img class="_2tuBw _12_oN" alt="Shanthi Sagar" width="254" height="160" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/cn807cbul0jomdpztpt7">
+                                        </div>
+                                        
+                                        <div class="place-name-div">
+                                            <div class="name">Shanthi Sagar</div>
+                                            <div class="food-items">
+                                                South Indian, North Indian, Chinese, Thalis, Indian, Home Food, Beverages
+                                            </div>
+                                        </div>
+                                        <div class="info-div">
+                                            <div class="rating">
+                                                <span class="icon-star"><i class="fa-solid fa-star"></i></span>
+                                                <span>4.2</span>
+                                            </div>
+                                            <div>•</div>
+                                            <div>38 MINS</div>
+                                            <div>•</div>
+                                            <div class="price">Rs.200 FOR TWO</div>
+                                        </div>
+                                        <div class="offer-div">
+                                            <span class="ico-offer-filled"><i class="fa-solid fa-tag"></i></span>
+                                            <span class="offer-text">20% off | Use TRYNEW</span>
+                                        </div>
+                                 </div>
+                                 <div class="quick-view">
+                                    <span class="view-button">
+                                        Quick-view
+                                    </span>
+                                 </div>
+                               </div> 
+                            </a>
+                        </div>
+                        <div class="place">
+                            <a class="place-link" href="https://www.swiggy.com/restaurants/thalassery-restaurant-ramiah-hospital-backgate-mathikere-bangalore-27212">
+                               <div class="list-item">
+                                 <div class="item-content">
+                                        <div class="top-image">
+                                            <img class="_2tuBw _12_oN" alt="Thalassery Restaurant" width="254" height="160" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/jfwfzmajl59wpaphrkck">
+                                        </div>
+                                        <div class="status">Promoted</div>
+                                        <div class="place-name-div">
+                                            <div class="name">Thalassery Restaurant</div>
+                                            <div class="food-items">
+                                                South Indian, Arabian, Chinese, Kerala, North Indian
+                                            </div>
+                                        </div>
+                                        <div class="info-div">
+                                            <div class="rating">
+                                                <span class="icon-star"><i class="fa-solid fa-star"></i></span>
+                                                <span>4.0</span>
+                                            </div>
+                                            <div>•</div>
+                                            <div>38 MINS</div>
+                                            <div>•</div>
+                                            <div class="price">Rs.300 FOR TWO</div>
+                                        </div>
+                                        <div class="offer-div">
+                                            <span class="ico-offer-filled"><i class="fa-solid fa-tag"></i></span>
+                                            <span class="offer-text">20% off | Use TRYNEW</span>
+                                        </div>
+                                 </div>
+                                 <div class="quick-view">
+                                    <span class="view-button">
+                                        Quick-view
+                                    </span>
+                                 </div>
+                               </div> 
+                            </a>
+                        </div>
+                        <div class="place">
+                            <a class="place-link" href="https://www.swiggy.com/restaurants/al-bek-m-h-chandrappa-r-m-v-2nd-stage-bangalore-334294">
+                               <div class="list-item">
+                                 <div class="item-content">
+                                        <div class="top-image">
+                                            <img class="_2tuBw _12_oN" alt="AL- BEK" width="254" height="160" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/zkntmqnmiiwyjm4eappz">
+                                        </div>
+                                        <div class="status">Promoted</div>
+                                        <div class="place-name-div">
+                                            <div class="name">AL- BEK</div>
+                                            <div class="food-items">
+                                                Indian, Chinese, Tandoor, Mughlai, Arabian, North Indian, Biryani, Snacks
+                                            </div>
+                                        </div>
+                                        <div class="info-div">
+                                            <div class="rating">
+                                                <span class="icon-star"><i class="fa-solid fa-star"></i></span>
+                                                <span>4.1</span>
+                                            </div>
+                                            <div>•</div>
+                                            <div>39 MINS</div>
+                                            <div>•</div>
+                                            <div class="price">Rs.400 FOR TWO</div>
+                                        </div>
+                                        <div class="offer-div">
+                                            <span class="ico-offer-filled"><i class="fa-solid fa-tag"></i></span>
+                                            <span class="offer-text">10% off | Use PARTY</span>
+                                        </div>
+                                 </div>
+                                 <div class="quick-view">
+                                    <span class="view-button">
+                                        Quick-view
+                                    </span>
+                                 </div>
+                               </div> 
+                            </a>
+                        </div>
+                        <div class="place">
+                            <a class="place-link" href="https://www.swiggy.com/restaurants/freshmenu-dinnur-main-road-rt-nagar-bangalore-6908">
+                               <div class="list-item">
+                                 <div class="item-content">
+                                        <div class="top-image">
+                                            <img class="_2tuBw _12_oN" alt="Freshmenu" width="254" height="160" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/u433lmrnv6w8oiwac7jv">
+                                        </div>
+                                        <div class="status">Promoted</div>
+                                        <div class="place-name-div">
+                                            <div class="name">Freshmenu</div>
+                                            <div class="food-items">
+                                                Chinese, Continental, Italian, Mediterranean, Thai, Lebanese, American, Asian, B...
+                                            </div>
+                                        </div>
+                                        <div class="info-div">
+                                            <div class="rating1">
+                                                <span class="icon-star"><i class="fa-solid fa-star"></i></span>
+                                                <span>3.7</span>
+                                            </div>
+                                            <div>•</div>
+                                            <div>43 MINS</div>
+                                            <div>•</div>
+                                            <div class="price">Rs.250 FOR TWO</div>
+                                        </div>
+                                        <div class="offer-div">
+                                            <span class="ico-offer-filled"><i class="fa-solid fa-tag"></i></span>
+                                            <span class="offer-text">FLAT Rs.125 off on orders above Rs.249</span>
+                                        </div>
+                                 </div>
+                                 <div class="quick-view">
+                                    <span class="view-button">
+                                        Quick-view
+                                    </span>
+                                 </div>
+                               </div> 
+                            </a>
+                        </div>
+                        <div class="place">
+                            <a class="place-link" href="https://www.swiggy.com/restaurants/the-bowl-company-bhoopasandra-r-m-v-2nd-stage-bangalore-71595">
+                               <div class="list-item">
+                                 <div class="item-content">
+                                        <div class="top-image">
+                                            <img class="_2tuBw _12_oN" alt="The Bowl Company" width="254" height="160" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/w7bwdzlvdguolaagyy0f">
+                                        </div>
+                                        
+                                        <div class="place-name-div">
+                                            <div class="name">The Bowl Company</div>
+                                            <div class="food-items">
+                                                Continental, Indian, Pan-Asian, Oriental, Desserts, Chinese, Biryani, Sweets
+                                            </div>
+                                        </div>
+                                        <div class="info-div">
+                                            <div class="rating">
+                                                <span class="icon-star"><i class="fa-solid fa-star"></i></span>
+                                                <span>4.3</span>
+                                            </div>
+                                            <div>•</div>
+                                            <div>35 MINS</div>
+                                            <div>•</div>
+                                            <div class="price">Rs.300 FOR TWO</div>
+                                        </div>
+                                        <div class="offer-div">
+                                            <span class="ico-offer-filled"><i class="fa-solid fa-tag"></i></span>
+                                            <span class="offer-text">40% off | Use TRYNEW</span>
+                                        </div>
+                                 </div>
+                                 <div class="quick-view">
+                                    <span class="view-button">
+                                        Quick-view
+                                    </span>
+                                 </div>
+                               </div> 
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- footer section -->
+        <footer class="footer">
+            <div class="footer-content"> 
+                <div class="points">COMPANY
+                    <ul>
+                        <li class="footer-li"><a href="#">About us</a></li>
+                        <li class="footer-li"><a href="#">Team</a></li>
+                        <li class="footer-li"><a href="#">Careers</a></li>
+                        <li class="footer-li"><a href="#">Swiggy Blog</a></li>
+                        <li class="footer-li"><a href="#">Bug Bounty</a></li>
+                        <li class="footer-li"><a href="#">Swiggy Super</a></li>
+                        <li class="footer-li"><a href="#">Swiggy Corporat</a></li>
+                        <li class="footer-li"><a href="#">Swiggy Instamar</a></li>
+                    </ul>
+                </div>
+                <div class="points">CONTACT
+                    <ul>
+                        <li class="footer-li"><a href="#">Help & Support</a></li>
+                        <li class="footer-li"><a href="#">Partner with us</a></li>
+                        <li class="footer-li"><a href="#">Ride with us</a></li>
+                    </ul>
+                </div>
+                <div class="points">LEGAL
+                    <ul>
+                        <li class="footer-li"><a href="#">Terms & Conditions</a></li>
+                        <li class="footer-li"><a href="#">Refund & Cancellation</a></li>
+                        <li class="footer-li"><a href="#">Privacy Policy</a></li>
+                        <li class="footer-li"><a href="#">Cookie Policy</a></li>
+                        <li class="footer-li"><a href="#">Office terms</a></li>
+                        <li class="footer-li"><a href="#">Phishing and Fraud</a></li>
+                        <li class="footer-li"><a href="#">Corporate-Swiggy Money Codes Terms & Coditions</a></li>
+                        <li class="footer-li"><a href="#">Corporate-Swiggy Discount Voucher Terms & Coditions</a></li>
+                    </ul>
+                </div>
+                <div class="points">
+                    <a href="https://itunes.apple.com/in/app/id989540920?referrer=utm_source%3Dswiggy%26utm_medium%3Dhomepage" rel="nofollow noopener" alt="" target="_blank" class="appstore" data-testid="ios-appstore"><img alt="" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200,h_65/icon-AppStore_lg30tv"></a>
+                    <a href="https://play.google.com/store/apps/details?id=in.swiggy.android&amp;referrer=utm_source%3Dswiggy%26utm_medium%3Dheader" rel="nofollow noopener" alt="" target="_blank" class="google-play" data-testid="android-playstore"><img alt="" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200,h_65/icon-GooglePlay_1_zixjxl"></a>
+                </div>
+            </div>
+        </footer>
+     </div>
+</body>
+</html>
