@@ -1,0 +1,16 @@
+.main-container{
+    display: none;
+}
+
+.mobile-view{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 10px;
+    width: 300px;
+}
